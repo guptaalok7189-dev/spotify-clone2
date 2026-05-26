@@ -64,6 +64,32 @@
       "uploadedBy": "87c53608-11f9-4c6f-b64b-c4d027165aa6",
       "uploadedByUsername": "shivam",
       "createdAt": "2026-05-24T06:25:55.377Z"
+    },
+    {
+      "id": "883d52b8-6987-4622-8885-0ebfcf17b16a",
+      "title": "Tere Bin",
+      "artist": "Rabbi shergill",
+      "album": "Unknown Album",
+      "duration": 312.084878,
+      "filename": "f2308924-647a-4db8-9967-e525e2459f91.mp3",
+      "url": "/uploads/f2308924-647a-4db8-9967-e525e2459f91.mp3",
+      "cover": null,
+      "uploadedBy": "6a6525ac-7c39-4d5f-b45d-46b321765e39",
+      "uploadedByUsername": "alok",
+      "createdAt": "2026-05-26T19:52:17.719Z"
+    },
+    {
+      "id": "43a797c7-600a-43fa-8997-b10de9ddbb5e",
+      "title": "Sanu Rog Laan Waleya",
+      "artist": "Nusrat Fateh Alikhan",
+      "album": "Unknown Album",
+      "duration": 576.875021,
+      "filename": "cd6c5ca2-64fb-4f5a-9e6e-15f9e2f0a0be.mp3",
+      "url": "/uploads/cd6c5ca2-64fb-4f5a-9e6e-15f9e2f0a0be.mp3",
+      "cover": null,
+      "uploadedBy": "6a6525ac-7c39-4d5f-b45d-46b321765e39",
+      "uploadedByUsername": "alok",
+      "createdAt": "2026-05-26T19:56:27.201Z"
     }
   ],
   "playlists": [
@@ -128,6 +154,11 @@
       "token": "0bbe6a66-d0ec-49af-a91a-50753c415ba43ac35a8a-3a35-45ee-a3fe-ced00d891021",
       "userId": "87c53608-11f9-4c6f-b64b-c4d027165aa6",
       "username": "shivam"
+    },
+    {
+      "token": "460d251e-0234-4823-82c9-b94a9c0903137332788f-5702-4376-a5ea-5fb717dbc90e",
+      "userId": "6a6525ac-7c39-4d5f-b45d-46b321765e39",
+      "username": "alok"
     }
   ]
 }

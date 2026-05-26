@@ -5,14 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Spotify Clone</title>
   <link rel="stylesheet" href="/css/style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body class="auth-page">
 
-<!-- ═══════════════════════════════════════════════════════════
-     AUTH PAGE
-════════════════════════════════════════════════════════════ -->
+<!-- ═══════════════════════════ AUTH PAGE ════════════════════════ -->
 <div class="auth-bg" id="authContainer">
   <div class="auth-orbs">
     <div class="orb orb1"></div>
@@ -24,11 +22,9 @@
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
       <span>Spotify</span>
     </div>
-
-    <!-- Login -->
     <div id="loginForm" class="auth-form">
       <h2>Log in to Spotify</h2>
-      <p class="auth-sub">Welcome back! Enter your details.</p>
+      <p class="auth-sub">Welcome back!</p>
       <div class="form-group">
         <label>Username</label>
         <div class="input-wrap"><i class="fas fa-user"></i><input type="text" id="loginUsername" placeholder="Your username" autocomplete="username"/></div>
@@ -41,8 +37,6 @@
       <button class="btn-primary" id="loginBtn"><span>Log In</span><i class="fas fa-arrow-right"></i></button>
       <p class="auth-switch">Don't have an account? <a href="#" id="goToSignup">Sign up free</a></p>
     </div>
-
-    <!-- Signup -->
     <div id="signupForm" class="auth-form" style="display:none">
       <h2>Create account</h2>
       <p class="auth-sub">Join millions of music lovers.</p>
@@ -65,9 +59,7 @@
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════
-     MAIN APP
-════════════════════════════════════════════════════════════ -->
+<!-- ═══════════════════════════ MAIN APP ═════════════════════════ -->
 <div class="app-layout" id="appLayout" style="display:none">
 
   <!-- Sidebar -->
@@ -85,6 +77,7 @@
       <button class="sidebar-btn" id="createPlaylistBtn"><i class="fas fa-plus-square"></i><span>Create Playlist</span></button>
       <a href="#" class="nav-item" data-view="liked"><i class="fas fa-heart" style="color:#b49bf0"></i><span>Liked Songs</span></a>
       <a href="#" class="nav-item" data-view="profile"><i class="fas fa-user-circle"></i><span>Profile</span></a>
+      <a href="#" class="nav-item upgrade-nav-btn" data-view="plans"><i class="fas fa-crown" style="color:#FCD34D"></i><span id="sidebarPlanLabel">Upgrade</span></a>
     </div>
     <div class="sidebar-divider"></div>
     <div class="playlist-list" id="sidebarPlaylists"></div>
@@ -92,8 +85,6 @@
 
   <!-- Main -->
   <main class="main-content">
-
-    <!-- Topbar -->
     <div class="topbar">
       <div class="topbar-nav">
         <button class="topbar-nav-btn" onclick="history.back()"><i class="fas fa-chevron-left"></i></button>
@@ -103,6 +94,7 @@
         <button class="profile-btn" id="profileBtn">
           <div class="profile-avatar" id="profileAvatar">U</div>
           <span id="profileUsername">User</span>
+          <span class="plan-badge" id="topbarPlanBadge">Free</span>
           <i class="fas fa-chevron-down"></i>
         </button>
         <div class="profile-dropdown" id="profileDropdown">
@@ -110,11 +102,12 @@
             <div class="dropdown-avatar" id="dropdownAvatar">U</div>
             <div>
               <div class="dropdown-username" id="dropdownUsername">Username</div>
-              <div class="dropdown-tag">Free Plan</div>
+              <div class="dropdown-tag" id="dropdownPlanTag">Free Plan</div>
             </div>
           </div>
           <div class="dropdown-divider"></div>
           <button class="dropdown-item" data-view="profile"><i class="fas fa-user"></i>Profile</button>
+          <button class="dropdown-item" data-view="plans"><i class="fas fa-crown"></i>Manage Plan</button>
           <button class="dropdown-item" id="openUploadBtn"><i class="fas fa-upload"></i>Upload Song</button>
           <div class="dropdown-divider"></div>
           <button class="dropdown-item danger" id="logoutBtn"><i class="fas fa-sign-out-alt"></i>Log Out</button>
@@ -128,7 +121,10 @@
         <h1 id="homeGreeting">Good evening</h1>
       </div>
       <div class="section">
-        <div class="section-header"><h2>All Songs</h2><button class="upload-btn" id="homeUploadBtn"><i class="fas fa-plus"></i> Upload</button></div>
+        <div class="section-header">
+          <h2>All Songs</h2>
+          <button class="upload-btn" id="homeUploadBtn"><i class="fas fa-plus"></i> Upload</button>
+        </div>
         <div class="song-list" id="allSongsList"></div>
       </div>
     </div>
@@ -164,12 +160,16 @@
     <!-- PROFILE -->
     <div class="view" id="view-profile">
       <div class="profile-hero">
-        <div class="profile-hero-bg" id="profileHeroBg"></div>
+        <div class="profile-hero-bg"></div>
         <div class="profile-hero-content">
           <div class="profile-big-avatar" id="profileBigAvatar">U</div>
           <div class="profile-hero-info">
             <p class="view-type">PROFILE</p>
             <h1 id="profileHeroName">Username</h1>
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+              <span class="plan-badge-lg" id="profilePlanBadge">Free</span>
+              <span id="profileExpiry" style="font-size:0.8rem;color:#b3b3b3;"></span>
+            </div>
             <div class="profile-stats">
               <div class="stat"><span id="statSongs">0</span><label>Songs</label></div>
               <div class="stat"><span id="statPlaylists">0</span><label>Playlists</label></div>
@@ -178,7 +178,34 @@
           </div>
         </div>
       </div>
+      <div class="section">
+        <div class="usage-bar-wrap" id="usageBarWrap"></div>
+      </div>
       <div class="section"><h2>My Uploads</h2><div class="song-list" id="profileSongsList"></div></div>
+    </div>
+
+    <!-- PLANS PAGE -->
+    <div class="view" id="view-plans">
+      <div class="view-header gradient-header" style="--grad1:#7c3aed;--grad2:#121212">
+        <h1>Choose Your Plan</h1>
+        <p style="color:#b3b3b3;margin-top:6px;font-size:0.9rem;">Apni zaroorat ke hisaab se plan choose karo</p>
+      </div>
+      <div class="section">
+        <div class="plans-grid" id="plansGrid"></div>
+      </div>
+    </div>
+
+    <!-- ANALYTICS (Pro) -->
+    <div class="view" id="view-analytics">
+      <div class="view-header gradient-header" style="--grad1:#1d4ed8;--grad2:#121212">
+        <h1>Artist Dashboard</h1>
+        <p style="color:#b3b3b3;margin-top:6px;font-size:0.9rem;">Your music performance</p>
+      </div>
+      <div class="section">
+        <div class="analytics-stats" id="analyticsStats"></div>
+        <h2 style="margin-top:16px;">Song Performance</h2>
+        <div class="song-list" id="analyticsList"></div>
+      </div>
     </div>
 
     <!-- PLAYLIST VIEW -->
@@ -195,7 +222,6 @@
       </div>
       <div class="section"><div class="song-list" id="playlistSongsList"></div></div>
     </div>
-
   </main>
 
   <!-- Queue Panel -->
@@ -206,9 +232,9 @@
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════
-     MODALS
-════════════════════════════════════════════════════════════ -->
+<!-- ═════════════════════════ MODALS ═════════════════════════════ -->
+
+<!-- Upload Modal -->
 <div class="modal-overlay" id="uploadModal">
   <div class="modal">
     <div class="modal-header"><h2>Upload Song</h2><button class="modal-close" id="closeUploadModal"><i class="fas fa-times"></i></button></div>
@@ -231,6 +257,7 @@
   </div>
 </div>
 
+<!-- Create Playlist Modal -->
 <div class="modal-overlay" id="createPlaylistModal">
   <div class="modal modal-sm">
     <div class="modal-header"><h2>Create Playlist</h2><button class="modal-close" id="closePlaylistModal"><i class="fas fa-times"></i></button></div>
@@ -242,6 +269,7 @@
   </div>
 </div>
 
+<!-- Add to Playlist Modal -->
 <div class="modal-overlay" id="addToPlaylistModal">
   <div class="modal modal-sm">
     <div class="modal-header"><h2>Add to Playlist</h2><button class="modal-close" id="closeAddToPlaylist"><i class="fas fa-times"></i></button></div>
@@ -249,9 +277,61 @@
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════
-     PLAYER
-════════════════════════════════════════════════════════════ -->
+<!-- Payment Modal -->
+<div class="modal-overlay" id="paymentModal">
+  <div class="modal modal-sm">
+    <div class="modal-header">
+      <h2 id="paymentModalTitle">Upgrade to Premium</h2>
+      <button class="modal-close" id="closePaymentModal"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="modal-body">
+      <div class="payment-plan-summary" id="paymentPlanSummary"></div>
+      <div class="form-group"><label>Cardholder Name</label><input type="text" id="cardName" placeholder="Name as on card"/></div>
+      <div class="form-group">
+        <label>Card Number</label>
+        <div class="card-input-wrap">
+          <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19"/>
+          <i class="fas fa-credit-card"></i>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div class="form-group"><label>Expiry (MM/YY)</label><input type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5"/></div>
+        <div class="form-group"><label>CVV</label><input type="text" id="cardCvv" placeholder="•••" maxlength="4"/></div>
+      </div>
+      <div class="auth-error" id="paymentError"></div>
+      <button class="btn-primary" id="payNowBtn"><i class="fas fa-lock"></i> <span id="payBtnText">Pay ₹99 — Activate</span></button>
+      <p style="text-align:center;font-size:0.75rem;color:#888;margin-top:8px;"><i class="fas fa-shield-alt"></i> Secure payment — data encrypted</p>
+    </div>
+  </div>
+</div>
+
+<!-- Payment Success Modal -->
+<div class="modal-overlay" id="successModal">
+  <div class="modal modal-sm">
+    <div class="modal-body" style="text-align:center;padding:32px 24px;">
+      <div class="success-icon"><i class="fas fa-check"></i></div>
+      <h2 id="successTitle" style="margin:16px 0 6px;">Welcome to Premium!</h2>
+      <p id="successSub" style="color:#b3b3b3;font-size:0.875rem;margin-bottom:20px;"></p>
+      <div class="success-features" id="successFeatures"></div>
+      <button class="btn-primary" id="successCloseBtn" style="margin-top:16px;">Start Listening</button>
+    </div>
+  </div>
+</div>
+
+<!-- Upgrade Prompt Modal (when limit hit) -->
+<div class="modal-overlay" id="upgradePromptModal">
+  <div class="modal modal-sm">
+    <div class="modal-body" style="text-align:center;padding:28px 24px;">
+      <div style="font-size:2.5rem;margin-bottom:12px;">&#128081;</div>
+      <h2 id="upgradePromptTitle" style="margin-bottom:8px;">Limit Reached!</h2>
+      <p id="upgradePromptMsg" style="color:#b3b3b3;font-size:0.875rem;margin-bottom:20px;"></p>
+      <button class="btn-primary" id="upgradePromptBtn">View Plans</button>
+      <button class="btn-secondary" id="upgradePromptClose" style="margin-top:8px;width:100%;padding:10px;border-radius:500px;background:transparent;border:1px solid #555;color:#b3b3b3;cursor:pointer;">Maybe Later</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═════════════════════════ PLAYER ═════════════════════════════ -->
 <footer class="player" id="player">
   <div class="player-left">
     <div class="player-cover" id="playerCover"><i class="fas fa-music"></i></div>
@@ -263,11 +343,11 @@
   </div>
   <div class="player-center">
     <div class="player-controls">
-      <button class="ctrl-btn" id="shuffleBtn" title="Shuffle"><i class="fas fa-random"></i></button>
+      <button class="ctrl-btn" id="shuffleBtn"><i class="fas fa-random"></i></button>
       <button class="ctrl-btn" id="prevBtn"><i class="fas fa-step-backward"></i></button>
       <button class="ctrl-btn play-pause-btn" id="playPauseBtn"><i class="fas fa-play"></i></button>
       <button class="ctrl-btn" id="nextBtn"><i class="fas fa-step-forward"></i></button>
-      <button class="ctrl-btn" id="repeatBtn" title="Repeat"><i class="fas fa-redo"></i></button>
+      <button class="ctrl-btn" id="repeatBtn"><i class="fas fa-redo"></i></button>
     </div>
     <div class="progress-container">
       <span id="currentTime">0:00</span>
@@ -280,7 +360,7 @@
   </div>
   <div class="player-right">
     <canvas id="visualizer" width="80" height="32"></canvas>
-    <button class="ctrl-btn" id="queueBtn" title="Queue"><i class="fas fa-list"></i></button>
+    <button class="ctrl-btn" id="queueBtn"><i class="fas fa-list"></i></button>
     <i class="fas fa-volume-up vol-icon"></i>
     <div class="volume-track" id="volumeTrack">
       <div class="volume-fill" id="volumeFill" style="width:70%"></div>
