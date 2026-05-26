@@ -1,0 +1,133 @@
+{
+  "songs": [
+    {
+      "id": "910fc640-4bc0-418a-b4dd-0ee74d638ad7",
+      "title": "Gall Khaas 1",
+      "artist": "zehr vibe",
+      "album": "Unknown Album",
+      "duration": 160.222041,
+      "filename": "4a97988b-1493-44e4-a7cd-153678a1d539.mp3",
+      "url": "/uploads/4a97988b-1493-44e4-a7cd-153678a1d539.mp3",
+      "cover": null,
+      "uploadedBy": "6a6525ac-7c39-4d5f-b45d-46b321765e39",
+      "uploadedByUsername": "alok",
+      "createdAt": "2026-05-15T02:39:08.867Z"
+    },
+    {
+      "id": "a87f103a-6f90-4c1d-a4b1-3819ea881e28",
+      "title": "DONALI",
+      "artist": "sanga",
+      "album": "Unknown Album",
+      "duration": 171.549025,
+      "filename": "8e05f3f9-fae8-4d35-ac11-98db0ebda6e3.mp3",
+      "url": "/uploads/8e05f3f9-fae8-4d35-ac11-98db0ebda6e3.mp3",
+      "cover": null,
+      "uploadedBy": "6a6525ac-7c39-4d5f-b45d-46b321765e39",
+      "uploadedByUsername": "alok",
+      "createdAt": "2026-05-15T02:49:17.418Z"
+    },
+    {
+      "id": "ad94ff25-0397-419b-9ecf-b3740d521d12",
+      "title": "Kali Kali Zulfon",
+      "artist": "Nusrat Fateh Ali Khan",
+      "album": "Unknown Album",
+      "duration": 564.384979,
+      "filename": "a86461d5-2897-4ea4-8714-d9cd968075fb.mp3",
+      "url": "/uploads/a86461d5-2897-4ea4-8714-d9cd968075fb.mp3",
+      "cover": null,
+      "uploadedBy": "87c53608-11f9-4c6f-b64b-c4d027165aa6",
+      "uploadedByUsername": "shivam",
+      "createdAt": "2026-05-15T02:51:51.369Z"
+    },
+    {
+      "id": "b33fcc8f-cadb-43ac-8fff-092da013d2c4",
+      "title": "Dil Jhoom Ali Zafar",
+      "artist": "ali zahar",
+      "album": "Unknown Album",
+      "duration": 389.289796,
+      "filename": "b0fc977a-6a71-481c-8ee4-1f273f7b2eba.mp3",
+      "url": "/uploads/b0fc977a-6a71-481c-8ee4-1f273f7b2eba.mp3",
+      "cover": null,
+      "uploadedBy": "6a6525ac-7c39-4d5f-b45d-46b321765e39",
+      "uploadedByUsername": "alok",
+      "createdAt": "2026-05-15T03:05:40.639Z"
+    },
+    {
+      "id": "076c03a5-baca-4b12-af3d-8bf1686c813a",
+      "title": "Ramta mema vich",
+      "artist": "Ramta",
+      "album": "Unknown Album",
+      "duration": 200.620378,
+      "filename": "cac9e00f-926a-4b5d-8232-8083c5dd73b9.mp3",
+      "url": "/uploads/cac9e00f-926a-4b5d-8232-8083c5dd73b9.mp3",
+      "cover": null,
+      "uploadedBy": "87c53608-11f9-4c6f-b64b-c4d027165aa6",
+      "uploadedByUsername": "shivam",
+      "createdAt": "2026-05-24T06:25:55.377Z"
+    }
+  ],
+  "playlists": [
+    {
+      "id": "7f5d8f8b-d6f0-45af-9357-0d076cd39b3a",
+      "name": "vibing",
+      "description": "",
+      "songs": [
+        "910fc640-4bc0-418a-b4dd-0ee74d638ad7",
+        "a87f103a-6f90-4c1d-a4b1-3819ea881e28"
+      ],
+      "userId": "6a6525ac-7c39-4d5f-b45d-46b321765e39",
+      "username": "alok",
+      "createdAt": "2026-05-15T02:47:09.602Z"
+    },
+    {
+      "id": "67628651-6e6b-4782-b27b-5069730a14cc",
+      "name": "mood",
+      "description": "",
+      "songs": [
+        "a87f103a-6f90-4c1d-a4b1-3819ea881e28"
+      ],
+      "userId": "87c53608-11f9-4c6f-b64b-c4d027165aa6",
+      "username": "shivam",
+      "createdAt": "2026-05-24T06:15:51.114Z"
+    }
+  ],
+  "liked": [
+    {
+      "userId": "6a6525ac-7c39-4d5f-b45d-46b321765e39",
+      "songId": "910fc640-4bc0-418a-b4dd-0ee74d638ad7"
+    },
+    {
+      "userId": "6a6525ac-7c39-4d5f-b45d-46b321765e39",
+      "songId": "a87f103a-6f90-4c1d-a4b1-3819ea881e28"
+    },
+    {
+      "userId": "87c53608-11f9-4c6f-b64b-c4d027165aa6",
+      "songId": "a87f103a-6f90-4c1d-a4b1-3819ea881e28"
+    },
+    {
+      "userId": "87c53608-11f9-4c6f-b64b-c4d027165aa6",
+      "songId": "910fc640-4bc0-418a-b4dd-0ee74d638ad7"
+    }
+  ],
+  "users": [
+    {
+      "id": "6a6525ac-7c39-4d5f-b45d-46b321765e39",
+      "username": "alok",
+      "password": "212691a31a5f7dd95521bae7e3ae626d759dc63a46e6a9d84793bfd0097b4d27",
+      "createdAt": "2026-05-15T02:38:19.625Z"
+    },
+    {
+      "id": "87c53608-11f9-4c6f-b64b-c4d027165aa6",
+      "username": "shivam",
+      "password": "cdf33c61027397b216d91a9747964ae5ec884147b2b620a5a70d9cabecace4f6",
+      "createdAt": "2026-05-15T02:50:26.089Z"
+    }
+  ],
+  "sessions": [
+    {
+      "token": "0bbe6a66-d0ec-49af-a91a-50753c415ba43ac35a8a-3a35-45ee-a3fe-ced00d891021",
+      "userId": "87c53608-11f9-4c6f-b64b-c4d027165aa6",
+      "username": "shivam"
+    }
+  ]
+}
