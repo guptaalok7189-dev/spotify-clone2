@@ -24,7 +24,8 @@
       "cover": null,
       "uploadedBy": "6a6525ac-7c39-4d5f-b45d-46b321765e39",
       "uploadedByUsername": "alok",
-      "createdAt": "2026-05-15T02:49:17.418Z"
+      "createdAt": "2026-05-15T02:49:17.418Z",
+      "playCount": 1
     },
     {
       "id": "ad94ff25-0397-419b-9ecf-b3740d521d12",
@@ -37,7 +38,8 @@
       "cover": null,
       "uploadedBy": "87c53608-11f9-4c6f-b64b-c4d027165aa6",
       "uploadedByUsername": "shivam",
-      "createdAt": "2026-05-15T02:51:51.369Z"
+      "createdAt": "2026-05-15T02:51:51.369Z",
+      "playCount": 1
     },
     {
       "id": "b33fcc8f-cadb-43ac-8fff-092da013d2c4",
@@ -99,7 +101,8 @@
       "description": "",
       "songs": [
         "910fc640-4bc0-418a-b4dd-0ee74d638ad7",
-        "a87f103a-6f90-4c1d-a4b1-3819ea881e28"
+        "a87f103a-6f90-4c1d-a4b1-3819ea881e28",
+        "ad94ff25-0397-419b-9ecf-b3740d521d12"
       ],
       "userId": "6a6525ac-7c39-4d5f-b45d-46b321765e39",
       "username": "alok",
@@ -140,7 +143,11 @@
       "id": "6a6525ac-7c39-4d5f-b45d-46b321765e39",
       "username": "alok",
       "password": "212691a31a5f7dd95521bae7e3ae626d759dc63a46e6a9d84793bfd0097b4d27",
-      "createdAt": "2026-05-15T02:38:19.625Z"
+      "createdAt": "2026-05-15T02:38:19.625Z",
+      "plan": "premium",
+      "planExpiry": "2026-06-26T03:00:43.535Z",
+      "cardLast4": "7777",
+      "cardName": "51112121215511"
     },
     {
       "id": "87c53608-11f9-4c6f-b64b-c4d027165aa6",
